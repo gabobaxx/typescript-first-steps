@@ -13,46 +13,49 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-console.log("Hello World");
-// TYPES 
-var myString2 = "Hello World 2";
-var myString = "Hello World"; // Solo sera String a lo largo de la vida del programa.
-// myString = 22;                   // No se puede cambiar los tipos.
+console.log('Hello World From Typescript For First Time :D');
+var h = 'vfdav';
+var func = function () { return console.log('hello'); };
+// TYPES
+var myString2 = 'Hello World 2';
+var myString = 'Hello World'; // Solo sera String a lo largo de la vida del programa.
+// myString = 22; // No se puede cambiar los tipos.
 var myNumber = 22;
 var myBool = true;
-var myVar = "Hello";
+var myVar = 'Hello';
 myVar = 22;
 // STRINGS
 document.write(myString); // Imprime mensajes en html
 // ARRAYS
-var StringArray = ["hola", "hello"];
+var StringArray = ['hola', 'hello'];
 var NumberArray = [1, 2, 3];
-var array = ["hola", "hello"];
+var array = ['hola', 'hello'];
 array = [1, 2];
 // TUPLE
-var strNumTaple = ["hola", 1];
+var strNumTaple = ['hola', 1];
 // VOID, UNDEFINED, NULL
 // let myVarVoid: void = undefined;
 // let myVarNull: null = null;
 // let myVarUndefined: undefined = undefined;
-// FUNTIONS 
+// FUNCTIONS
 function getSum(n1, n2) {
-    return (n1 + n2);
+    return n1 + n2;
 }
 var mySum = function (n1, n2) {
-    if (typeof (n1) == 'string') {
+    if (typeof n1 == 'string') {
         n1 = parseInt(n1);
     }
-    if (typeof (n2) == 'string') {
+    if (typeof n2 == 'string') {
         n2 = parseInt(n2);
     }
-    return (n1 + n2);
+    return n1 + n2;
 };
 // const suma = (n1: number, n2: number): number => n1 + n2;
 function getName(firstName, lastName) {
+    // ? parametro opcional
     return firstName + " " + lastName;
 }
-getName("Gabriel");
+getName('Gabriel');
 // Function voids
 function myVoidFunc() {
     console.log(2);
@@ -65,7 +68,7 @@ showTodo({
     title: 'Eat Dinner',
     text: 'lorem'
 });
-// CLASES 
+// CLASES
 var User = /** @class */ (function () {
     function User(name) {
         this.name = name;
@@ -81,7 +84,7 @@ var User = /** @class */ (function () {
 }());
 var jay = new User('jay');
 console.log(jay.register());
-// HERENCIA - INHERITANCE 
+// HERENCIA - INHERITANCE
 var Member = /** @class */ (function (_super) {
     __extends(Member, _super);
     function Member(id, name) {
@@ -96,3 +99,5 @@ var Member = /** @class */ (function (_super) {
 }(User));
 var gordon = new User('Gordon');
 gordon.payInvoice();
+getName('Gabriel', 'Bencomo');
+getSum(21, 21);
